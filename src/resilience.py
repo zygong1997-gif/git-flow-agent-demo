@@ -6,4 +6,6 @@ def calculate_resilience(network_size, failed_nodes):
     if network_size == 0:
         return 0
 
-    return 1 - failed_nodes / network_size
+    resilience = 1 - failed_nodes / network_size
+
+    return max(resilience, 0)
